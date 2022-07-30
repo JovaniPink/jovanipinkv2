@@ -1,0 +1,92 @@
+{
+  "title": "",
+  "name": "nextjs-typescript-boilerplate",
+  "description": "A TypeScript starter for NextJS. No plugins and styling. Exactly the necessary to start.",
+  "keywords": [
+    "react",
+    "nextjs",
+    "nextjs-starter",
+    "typescript"
+  ],
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "author": "",
+  "contributors": [
+    ""
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "test": "jest",
+    "test-all": "npm lint && npm type-check && npm test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "npm lint",
+      "npm format"
+    ]
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.3.0",
+    "@testing-library/react-hooks": "8.0.1",
+    "@testing-library/user-event": "14.2.5",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.11.45",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
+    "babel-jest": "27.5.1",
+    "eslint": "8.20.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-react": "7.30.1",
+    "husky": "8.0.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "27.5.1",
+    "jest-watch-typeahead": "1.1.0",
+    "lint-staged": "11.2.6",
+    "prettier": "2.7.1",
+    "typescript": "4.7.4",
+    "ts-jest": "27.1.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">= 14.15.1"
+  }
+}
